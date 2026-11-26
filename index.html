@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ndxiscracked</title>
+  <meta name="description" content="ndxiscracked — gated video model console. Free lanes, open weights, catalog.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b12'/%3E%3Cpath d='M9 22 16 8l7 14-7-4z' fill='%237c5cff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div id="gate" class="gate">
+    <div class="gate-card">
+      <div class="brand"><span class="b1">ndxi</span><span class="b2">scracked</span></div>
+      <p class="gate-sub">Private console. One key gets you in.</p>
+      <input id="pw" type="password" placeholder="Enter key" autocomplete="off" spellcheck="false">
+      <button id="enter" type="button">Crack In</button>
+      <p id="gate-msg" class="gate-msg" role="alert"></p>
+      <p class="gate-note">The key is not stored anywhere in this site — only its hash. Wrong guesses bounce.</p>
+    </div>
+  </div>
+
+  <div id="app" class="app" hidden>
+    <header class="topbar">
+      <div class="brand small"><span class="b1">ndxi</span><span class="b2">scracked</span></div>
+      <nav class="topnav">
+        <a href="#console">Console</a>
+        <a href="#board">Board</a>
+        <a href="#lanes">Free Lanes</a>
+      </nav>
+      <button id="logout" type="button" class="ghost">Log Out</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Video model console</h1>
+        <p>Every model on the board — fire means flagship. Open weights and free lanes are marked. Entries without a free route say so honestly; nothing here fakes a render.</p>
+      </section>
+
+      <section id="console" class="console">
+        <h2>Console</h2>
+        <textarea id="prompt" rows="3" placeholder="Describe the shot — camera, subject, motion, light, sound."></textarea>
+        <div class="console-row">
+          <select id="model-pick" aria-label="Model"></select>
+          <button id="run" type="button">Generate</button>
+        </div>
+        <pre id="log" class="log" aria-live="polite"></pre>
+      </section>
+
+      <section id="board">
+        <h2>Model board</h2>
+        <div id="grid" class="grid"></div>
+      </section>
+
+      <section id="lanes">
+        <h2>Free lanes from your own stack</h2>
+        <p class="lane-sub">Bots in <a href="https://github.com/robloxgamee1231-ctrl/LcDNSynsi">LcDNSynsi</a> already run these models on free credits.</p>
+        <div id="lane-grid" class="grid"></div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>ndxiscracked — catalog + console. Open weights and free lanes marked; paid APIs named as paid. No fake endpoints, no fake renders.</p>
+    </footer>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
